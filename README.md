@@ -24,6 +24,10 @@ Details on the data model and the queries can be studied in the schema file unde
 1. run it as regular Springboot project: `mvn spring-boot:run` (assuming you've installed maven already)
 2. run it within the IDE that you trust
 
+If you have Insomnia installed on your machine, you can import the *insomnia_queries.json* to see some basic queries.
+
 ## Disclaimer
 
 I copied it somewhere I don't remember. But I believe it was open source. Kudos to those who came up with it initially.
+
+Play with it, alter at will - hope you have fun. 
