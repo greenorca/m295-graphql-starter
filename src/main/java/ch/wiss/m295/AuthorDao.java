@@ -10,9 +10,10 @@ public class AuthorDao {
   private List<Author> authors;
 
   public AuthorDao(){
+    // initializing demo data
     authors = new ArrayList();
-    authors.add(new Author(1, "John"));
-    authors.add(new Author(2, "Jane"));
+    authors.add(new Author(1, "John Doe"));
+    authors.add(new Author(2, "Jane Fonda"));
   }
 
   public Author getAuthor(int authorId) {

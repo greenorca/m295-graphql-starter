@@ -13,12 +13,12 @@ public class PostDao {
 
   public PostDao() {
     posts = new ArrayList<>();
-
-    for (int i = 0; i < 10; i++) {
+    // initializing demo data
+    for (int i = 0; i < 6; i++) {
       Post post = new Post();
       post.setId(i);
-      post.setTitle("Hello World"+1);
-      post.setText("This is my "+i+"th post");
+      post.setTitle("Hello World");
+      post.setText("This is my "+String.valueOf(i/2)+". post");
       post.setCategory("Programming");
       post.setAuthorId(i%2+1);
       post.setCreatedAt(Calendar.getInstance().getTime());
