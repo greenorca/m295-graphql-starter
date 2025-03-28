@@ -15,7 +15,7 @@ type Author {
 type Query {
     recentPosts(count: Int, offset: Int): [Post]!
     postsFrom(authorId: Int): [Post]!
-
+    authors : [Author]!
 }
 
 type Mutation {

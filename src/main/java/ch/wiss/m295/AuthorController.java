@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
@@ -20,9 +21,9 @@ public class AuthorController {
         return authorDao.getAuthor(post.getAuthorId());
     }
 
-    @SchemaMapping(typeName="Author", field="posts")
-    public List<Post> getPosts(Author author) {
-        return null;
+    @QueryMapping
+    public List<Author> authors() {
+        return authorDao.getAuthors();
     }
 
     @MutationMapping
