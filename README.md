@@ -26,6 +26,12 @@ Details on the data model and the queries can be studied in the schema file unde
 
 If you have Insomnia installed on your machine, you can import the *insomnia_queries.json* to see some basic queries.
 
+## Schema Explorer and Query Builder
+
+Once the app is running, you can access the Built-in Graphiql Query Builder online at <http://localhost:8080/graphiql> that helps you to understand the schema and create queries.
+
+![Screenshot graphiql UI](img/graphiql.png)
+
 ## Disclaimer
 
 I copied it somewhere I don't remember. But I believe it was open source. Kudos to those who came up with it initially.
