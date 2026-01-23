@@ -11,7 +11,7 @@ public class AuthorDao {
 
   public AuthorDao(){
     // initializing demo data
-    authors = new ArrayList();
+    authors = new ArrayList<Author>();
     authors.add(new Author(1, "John Doe"));
     authors.add(new Author(2, "Jane Fonda"));
   }

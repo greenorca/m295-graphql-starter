@@ -8,6 +8,8 @@ import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
 import ch.wiss.m295.model.Post;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Controller
 public class PostController {
@@ -26,8 +28,10 @@ public class PostController {
     }
 
     @MutationMapping
-    public Post createPost(@Argument String title, @Argument String text,
-      @Argument String category, @Argument int authorId) {
+    public Post createPost(@NotBlank @Argument(name="title") String title, 
+            @NotBlank@Argument(name = "text") String text,
+            @Argument(name = "category") String category, 
+            @NotNull @Argument(name = "authorId") int authorId) {
 
         Post post = new Post();
         post.setId(postDao.getPosts().stream().map(Post::getId).max(Long::compare).orElse(0L) + 1);

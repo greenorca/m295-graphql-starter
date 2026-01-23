@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 
 import ch.wiss.m295.model.Author;
 import ch.wiss.m295.model.Post;
+import jakarta.validation.constraints.NotBlank;
 
 @Controller
 public class AuthorController {
@@ -27,7 +28,7 @@ public class AuthorController {
     }
 
     @MutationMapping
-    public Author createAuthor(@Argument String name) {
+    public Author createAuthor(@NotBlank @Argument(name="name") String name) {
         Author author = new Author();
         author.setId(authorDao.getAuthors().stream().map(Author::getId).max(Long::compare).orElse(0L) + 1);
         author.setName(name);
